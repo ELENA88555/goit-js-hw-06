@@ -3,8 +3,8 @@ const spanEl = document.querySelector('#text');
 
 
 
-inputEl.addEventListener('input', () => {
-  spanEl.style.fontSize = `${inputEl.value}px`
+inputEl.addEventListener('input', (event) => {
+  spanEl.style.fontSize = `${event.target.value}px`
 })
 
 
