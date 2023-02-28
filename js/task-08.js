@@ -9,10 +9,12 @@ formEl.addEventListener('submit', (event)  => {
     elements: { email, password }
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
-    window.alert("Всі поля повинні бути заповнені!");
+  if (email.value.trim() === "" || password.value.trim() === "") {
+     alert("Всі поля повинні бути заповнені!");
+     return
+   
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`)
+  console.log(email.value, password.value)
   event.currentTarget.reset();
 } )
 
